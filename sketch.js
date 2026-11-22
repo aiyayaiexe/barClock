@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
 }
 
@@ -19,13 +19,19 @@ function draw() {
   //hour
   fill(chour);
   hr = map(h, 0, 23, 0, 300);
-  rect(200, 200, hr, 50);
+  rect(width / 2, height / 2 - 100, hr, 50); 
   //minute
   fill(cmin);
   mr = map(m, 0, 59, 0, 300);
-  rect(200, 300, mr, 50);
+  rect(width / 2, height / 2, mr, 50);
   //second
   fill(csec);
   sr = map(s, 0, 59, 0, 300);
-  rect(200, 400, sr, 50);
+  rect(width / 2, height / 2 + 100, sr, 50);  
+  
+  windowResized();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
