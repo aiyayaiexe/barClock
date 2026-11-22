@@ -29,7 +29,6 @@ function draw() {
   sr = map(s, 0, 59, 0, 300);
   rect(width / 2, height / 2 + 100, sr, 50);  
   
-  windowResized();
 }
 
 function windowResized() {
